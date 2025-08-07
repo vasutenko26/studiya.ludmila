@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap');
 
+/* Базовые стили */
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.6;
@@ -17,77 +18,78 @@ body {
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+/* Заголовки – Playfair Display */
+h1, h2, h3, h4, h5, h6,
 .t-title {
   font-family: 'Playfair Display', serif !important;
   font-weight: 700;
   font-style: normal;
 }
 
+/* Иконки и эмфаза без курсива */
 i,
 em {
   font-style: normal;
 }
 
-/* Header: solid background and smooth shrink on scroll */
+/* Header: solid background и плавное сжатие при скролле */
 .header {
-  background: rgba(255, 255, 255, 0.95); /* Less transparent for readability */
-  transition: background 0.3s ease, padding 0.3s ease; /* Smooth transition */
-  z-index: 999; /* Sit above page content */
+  background: rgba(255, 255, 255, 0.95);
+  transition: background 0.3s ease, padding 0.3s ease;
+  z-index: 999;
 }
 .header.shrink {
-  padding: 0.25rem 0; /* Reduce height when scrolling */
-  background: rgba(255, 255, 255, 0.9); /* Slightly darker on shrink */
+  padding: 0.25rem 0;
+  background: rgba(255, 255, 255, 0.9);
 }
 
-/* Menu button: keep above content but below modals */
+/* Menu button: корректный z-index и отступ */
 .t450__menuicon,
 .t450__burger {
   z-index: 1000;
-  margin-right: 0.5rem; /* Tighter spacing */
+  margin-right: 0.5rem;
 }
 
-/* Services section title aligned in one line */
+/* Секция услуг */
 h2.tn-atom {
-  text-align: center; /* Center section headings */
-  background: none; /* Remove dark background */
+  text-align: center;
+  background: none;
 }
 
-/* Services cards grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   justify-items: center;
 }
+
 .service-card {
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
+
 .service-card img {
   width: 100%;
   height: auto;
   display: block;
 }
+
 .service-card .card-text {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   padding: 1rem;
   border-radius: 0 0 8px 8px;
 }
 
-/* Text blocks spacing */
+/* Текстовые блоки */
 p {
-  line-height: 1.8; /* Increase line spacing for readability */
-  margin-bottom: 1.5rem; /* Space between paragraphs */
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 .about-section {
   display: flex;
@@ -101,13 +103,13 @@ p {
   flex: 1 1 300px;
 }
 
-/* Fixed booking button */
+/* Фиксированная кнопка «Запис онлайн» */
 .book-btn {
   position: fixed;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #c2185b; /* Primary accent */
+  background: #c2185b;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
@@ -117,10 +119,10 @@ p {
   transition: background 0.3s ease;
 }
 .book-btn:hover {
-  background: #ad1457; /* Darker on hover */
+  background: #ad1457;
 }
 
-/* Small captions */
+/* Мелкие подписи */
 .small-text {
   font-size: 0.9rem;
   color: #333;
@@ -132,12 +134,13 @@ p {
     padding: 0.5rem 0;
   }
   .about-section {
-    flex-direction: column; /* Stack into single column */
+    flex-direction: column;
   }
   .book-btn {
     bottom: 1rem;
   }
 }
+
 @media (max-width: 480px) {
   .header {
     padding: 0.25rem 0;
@@ -147,8 +150,6 @@ p {
     padding: 0.5rem 1rem;
   }
   .services-grid {
-    grid-template-columns: 1fr; /* Single column grid */
+    grid-template-columns: 1fr;
   }
 }
-
-
