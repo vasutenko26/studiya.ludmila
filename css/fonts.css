@@ -3,9 +3,30 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.6;
+  word-wrap: break-word;
+  font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+.t-text,
+.t-descr,
+.t-name,
+.t-menu__link-item,
+.t-btn,
+.t-uptitle {
+  font-family: 'Open Sans', Arial, sans-serif !important;
+  font-style: normal;
+}
+
+/* Заголовки – Playfair Display для выразительности */
+h1, h2, h3, h4, h5, h6,
+.t-title {
+  font-family: 'Playfair Display', serif !important;
   font-weight: 700;
+  font-style: normal;
+}
+
+/* Дополнительно: иконки и акценты не курсивятся */
+i,
+em {
+  font-style: normal;
 }
