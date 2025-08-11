@@ -1,0 +1,65 @@
+<!doctype html>
+            <span class="badge">Оплата карткою</span>
+          </div>
+          <div class="hero-cta">
+            <button class="cta" onclick="openWA()">WhatsApp</button>
+            <button class="ghost" onclick="openTG()">Telegram</button>
+            <button class="ghost" onclick="callNow()">Подзвонити</button>
+          </div>
+        </div>
+        <div class="mock"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container columns">
+        <a class="kpi card-link" href="/permanent.html"><b>Перманент</b><br><span>Брови, губи, міжвійка</span></a>
+        <a class="kpi card-link" href="/laser.html"><b>Лазер</b><br><span>Карбоновий пілінг, омолодження, грибок</span></a>
+        <a class="kpi card-link" href="/massage.html"><b>Масаж</b><br><span>Релакс, лікувальний, лімфодренаж</span></a>
+        <a class="kpi card-link" href="/hair.html"><b>Перукар</b><br><span>Стрижки, фарбування, мелірування</span></a>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="container grid">
+        <div class="card">
+          <h3>Контакти та запис</h3>
+          <p>Телефон: <a href="tel:+380000000000">+38 (000) 000‑00‑00</a><br>
+             WhatsApp: <a href="#" onclick="openWA()">написати</a><br>
+             Telegram: <a href="#" onclick="openTG()">@your_salon</a><br>
+             Адреса: [Місто], [Вулиця, будинок]
+          </p>
+          <p><small>Щодня 10:00–20:00. Якщо не відповіли на дзвінок — напишіть у месенджер.</small></p>
+        </div>
+        <div class="card">
+          <h3>Швидка заявка</h3>
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <label>Імʼя<br><input name="name" required class="input"></label><br><br>
+            <label>Телефон / месенджер<br><input name="contact" required class="input"></label><br><br>
+            <label>Послуга<br>
+              <select name="service" class="input">
+                <option>Перманент</option>
+                <option>Лазер</option>
+                <option>Масаж</option>
+                <option>Перукар</option>
+              </select>
+            </label><br><br>
+            <button class="cta" type="submit">Відправити</button>
+            <span class="muted agree">Натискаючи «Відправити», ви погоджуєтесь на обробку персональних даних.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="y"></span> [Назва салону]. Усі права захищені.</div>
+      <div><a href="#">Політика конфіденційності</a></div>
+    </div>
+  </footer>
+
+  <script src="/assets/script.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
