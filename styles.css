@@ -27,6 +27,7 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
   position: relative;
+  transition: color 0.3s;
 }
 
 nav a::after {
@@ -38,6 +39,10 @@ nav a::after {
   height: 2px;
   background: #d4b59f;
   transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #d4b59f;
 }
 
 nav a:hover::after {
@@ -73,9 +78,7 @@ section {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
