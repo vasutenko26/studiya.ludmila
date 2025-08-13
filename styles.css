@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f1ec;
+  color: #2e2821;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+nav,
+footer {
+  background-color: #2e2821;
+  color: #f6f1ec;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav a {
+  color: #f6f1ec;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #d4b59f;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+section {
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.photo-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background-color: #ddd;
+  border: 2px dashed #2e2821;
+  margin-top: 1rem;
+}
+
+table.price {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table.price th,
+table.price td {
+  border-bottom: 1px solid #2e2821;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
